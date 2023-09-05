@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Главная
+{% endblock %}
+
+{% block header %}
+<h1>
+Главная
+</h1>
+{% endblock %}
+
+{% block content %}
+<div class="text-body text-justify">
+    <hr class="mb-4">
+    <h2>
+       Форма регистрации:
+    </h2>
+    <div class="text-monospace">
+        <form method="POST" action="{{ url_for('login') }}">
+            {{ form.hidden_tag() }}
+            <p>
+            {{ form.user_first_name.label }}<br>
+            {{ form.user_first_name(size=32) }}
+            </p>
+            <p>
+            {{ form.user_last_name.label }}<br>
+            {{ form.user_last_name(size=32) }}
+            </p>
+
+            <p>
+            {{ form.user_email.label }}<br>
+            {{ form.user_email(size=32) }}
+            </p>
+
+            <p>
+            {{ form.user_password.label }}<br>
+            {{ form.user_password(size=32) }}
+            </p>
+            <p>
+            {{ form.confirm_password.label }}<br>
+            {{ form.confirm_password(size=32) }}
+            </p>
+            <p>
+            <input type="submit" value="Регистрация">
+            </p>
+        </form>
+
+    </div>
+</div>
+
+{% endblock %}

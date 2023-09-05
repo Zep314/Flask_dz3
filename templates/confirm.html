@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Подтверждение регистрации
+{% endblock %}
+
+{% block header %}
+<h1>
+Подтверждение регистрации
+</h1>
+{% endblock %}
+
+{% block content %}
+<div class="text-body text-justify">
+    <hr class="mb-4">
+    <h2>
+       Регистрация успешна!
+    </h2>
+    <div class="text-monospace">
+        <p> First name: <i>{{ login.user_first_name }} </i></p>
+        <p> Last name: <i>{{ login.user_last_name }} </i></p>
+        <p> Email: <i>{{ login.user_email }} </i></p>
+        <p> Password: <i>{{ login.user_password }} </i></p>
+    </div>
+    <hr>
+    <div class="text-monospace">
+        Данные внесены в базу данных!
+    </div>
+    <hr>
+    <div class="text-monospace">
+        <form action="/">
+            <input type="submit">Вернуться</input>
+        </form>
+    </div>
+
+</div>
+
+{% endblock %}
