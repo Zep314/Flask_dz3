@@ -11,7 +11,7 @@
 {% endblock %}
 
 {% block content %}
-<div class="text-body text-justify">
+<p class="text-body text-justify">
     <hr class="mb-4">
     <h2>
        Регистрация успешна!
@@ -20,19 +20,18 @@
         <p> First name: <i>{{ login.user_first_name }} </i></p>
         <p> Last name: <i>{{ login.user_last_name }} </i></p>
         <p> Email: <i>{{ login.user_email }} </i></p>
-        <p> Password: <i>{{ login.user_password }} </i></p>
+        <p> Password: <i>{{ login.user_password }} </i> [ {{ login.user_hash_password }} ]</p>
     </div>
     <hr>
     <div class="text-monospace">
         Данные внесены в базу данных!
     </div>
     <hr>
-    <div class="text-monospace">
+    <p>
         <form action="/">
-            <input type="submit">Вернуться</input>
+            <input type="submit" value="Вернуться">
         </form>
-    </div>
-
+    </p>
 </div>
 
 {% endblock %}

@@ -45,8 +45,17 @@
             <input type="submit" value="Регистрация">
             </p>
         </form>
-
     </div>
+    <hr>
+    <p>
+        <p>
+            Просмотр всей базы
+        </p>
+        <form method="POST" action="{{ url_for('showdb') }}">
+            {{ form.hidden_tag() }}
+            <input type="submit" value="Показать">
+        </form>
+    </p>
 </div>
 
 {% endblock %}
